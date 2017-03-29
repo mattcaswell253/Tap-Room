@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { Keg } from './keg.model';
 
-
-
 @Component({
   selector: 'app-root',
   template: `
@@ -10,10 +8,10 @@ import { Keg } from './keg.model';
     <div class="jumbotron">
       <h1>Tap Room</h1>
     </div>
-    <keg-list [childKegList]="masterKegList" (clickSender)="editTask($event)"></keg-list>
+    <keg-list [childKegList]="masterKegList" (clickSender)="editKeg($event)"></keg-list>
     <hr>
-    <edit-keg [childSelectedTask]="selectedTask" (doneButtonClickedSender)="finishedEditing()"></edit-keg>
-    <new-task></new-task>
+    <edit-keg [childSelectedKeg]="selectedKeg" (doneButtonClickedSender)="finishedEditing()"></edit-keg>
+    <new-keg (newKegSender)="addKeg($event)"></new-keg>
 
   </div>
   `
@@ -21,11 +19,10 @@ import { Keg } from './keg.model';
 
 export class AppComponent {
   selectedKeg = null;
-  addKeg = null;
   masterKegList: Keg[] = [
-    new Keg('Bayerische Staatsbrauerei Weihenstephan', 'Weihenstephaner Pilsner', '5.1%', 5, 1),
-    new Keg('New Belgium', 'Voodoo Ranger', '7%', 6, 2),
-    new Keg('Deschutes Brewery', 'Obsidian Stout', '6.4%', 5, 3)
+    new Keg('Bayerische Staatsbrauerei Weihenstephan', 'Weihenstephaner Pilsner', '5.1%', '5', 1),
+    new Keg('New Belgium', 'Voodoo Ranger', '7%', '6', 2),
+    new Keg('Deschutes Brewery', 'Obsidian Stout', '6.4%', '5', 3)
   ];
   editKeg(clickedKeg) {
     this.selectedKeg = clickedKeg;
@@ -33,4 +30,10 @@ export class AppComponent {
   finishedEditing() {
     this.selectedKeg = null;
   }
+
+  addKeg(newKegFromChild: Keg) {
+    console.log(newKegFromChild);
+    this.masterKegList.push(newKegFromChild);
+  }
+
 }
