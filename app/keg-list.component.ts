@@ -11,17 +11,12 @@ import { Keg } from './keg.model';
    </select>
 
    <ul>
-      <li (click)="isEmpty(currentKeg)" *ngFor="let currentKeg of childKegList | volume:filterByVolume">{{currentKeg.brand}} - {{currentKeg.name}} | ABV: {{currentKeg.abv}} | Price: {{currentKeg.price}}
-        <input *ngIf="currentKeg.empty === true" type="checkbox" checked (click)="toggleEmpty(currentKeg, false)"/>
+      <div (click)="isEmpty(currentKeg)" *ngFor="let currentKeg of childKegList | volume:filterByVolume" class={{currentKeg.style}}>{{currentKeg.brand}} - {{currentKeg.name}} | ABV: {{currentKeg.abv}} | Price: {{currentKeg.price}}
+        <input *ngIf="currentKeg.empty === true" type="checkbox" (click)="toggleEmpty(currentKeg, false)"/>
         <input *ngIf="currentKeg.empty === false" type="checkbox" (click)="toggleEmpty(currentKeg, true)"/>
         <button (click)="editButtonHasBeenClicked(currentKeg)">Edit!</button>
-      </li>
+      </div>
     </ul>
-
-
-  <ul>
-  <li *ngFor="let currentKeg of childKegList | volume"><button (click)="editButtonHasBeenClicked(currentKeg)">Edit!</button></li>
-  </ul>
   `
 })
 

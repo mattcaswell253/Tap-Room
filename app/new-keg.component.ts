@@ -20,9 +20,9 @@ import { Keg } from './keg.model';
       <label>Enter Keg Style:</label>
       <br>
       <select #newStyle>
-      <option type="radio" [value]="1">1 (Blonde) </option><br>
-      <option type="radio" [value]="2">2 (Ale) </option><br>
-      <option type="radio" [value]="3">3 (Stout) </option>
+      <option type="radio" [value]="1">Blonde </option><br>
+      <option type="radio" [value]="2">Ale </option><br>
+      <option type="radio" [value]="3">Stout </option>
       </select>
       <button (click)="submitForm(newBrand.value, newName.value, newABV.value, newPrice.value, newStyle.value); newBrand.value=''; newName.value=''; newABV.value=''; newPrice.value='';">Add</button>
 

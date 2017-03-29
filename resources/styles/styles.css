@@ -1,0 +1,11 @@
+.1 {
+  background-color: red;
+}
+
+.jumbotron {
+  background: url("../../resources/images/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: inherit;
+}
