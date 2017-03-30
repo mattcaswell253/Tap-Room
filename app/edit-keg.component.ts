@@ -21,8 +21,12 @@ import { Keg } from './keg.model';
       <label>Enter Keg Style:</label>
       <br>
       <input type="radio" [(ngModel)]="childSelectedKeg.style" [value]="1">1 (Blonde)<br>
-      <input type="radio" [(ngModel)]="childSelectedKeg.style" [value]="2">2 (Ale)<br>
-      <input type="radio" [(ngModel)]="childSelectedKeg.style" [value]="3">3 (Stout)
+      <input type="radio" [(ngModel)]="childSelectedKeg.style" [value]="2">2 (Pilsner)<br>
+      <input type="radio" [(ngModel)]="childSelectedKeg.style" [value]="3">2 (Lager)<br>
+      <input type="radio" [(ngModel)]="childSelectedKeg.style" [value]="4">2 (Hefeweizen)<br>
+      <input type="radio" [(ngModel)]="childSelectedKeg.style" [value]="5">2 (IPA)<br>
+      <input type="radio" [(ngModel)]="childSelectedKeg.style" [value]="6">2 (Amber)<br>
+      <input type="radio" [(ngModel)]="childSelectedKeg.style" [value]="7">3 (Stout)
       <button (click)="doneButtonClicked()">Done</button>
     </div>
 

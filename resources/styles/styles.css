@@ -1,9 +1,41 @@
-.1 {
-  background-color: red;
+._1 {
+  background-color: rgb(253, 219, 39);
+}
+
+._2 {
+  background-color: rgb(250, 201, 1);
+}
+
+._3 {
+  background-color: rgb(250, 206, 42);
+}
+
+._4 {
+  background-color: rgb(171, 91, 20);
+}
+
+._5 {
+  background-color: rgb(228, 96, 37);
+}
+
+._6 {
+  background-color: rgb(179, 0, 19);
+}
+
+._7 {
+  background-color: rgb(5, 3, 6);
+  color: white;
 }
 
 .jumbotron {
-  background: url("../../resources/images/background.jpg");
+  background: url("../../resources/images/background2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: inherit;
+}
+body {
+  background: url("../../resources/images/background3.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
