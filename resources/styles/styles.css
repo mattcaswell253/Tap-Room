@@ -1,34 +1,36 @@
 ._1 {
   background-color: rgb(255, 255, 69);
+  text-shadow: 1px -1px 2px white;
 }
-
 ._2 {
   background-color: rgb(255, 233, 62);
+  text-shadow: 1px -1px 2px white;
 }
-
 ._3 {
   background-color: rgb(254, 216, 73);
+  text-shadow: 1px -1px 2px white;
 }
-
 ._4 {
   background-color: rgb(255, 168, 70);
+  text-shadow: 1px -1px 2px white;
 }
-
 ._5 {
   background-color: rgb(215, 127, 89);
+  text-shadow: 1px -1px 2px white;
 }
-
 ._6 {
   background-color: rgb(148, 82, 58);
+  text-shadow: 1px -1px 2px rgb(128, 69, 65);
 }
-
 ._7 {
   background-color: rgb(76, 59, 43);
   color: white;
+  text-shadow: 1px -1px 2px black;
 }
 ._8 {
   background-color: rgb(56, 48, 46);
   color: white;
+  text-shadow: 1px -1px 2px black;
 }
 
 .jumbotron {
