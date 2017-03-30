@@ -6,7 +6,7 @@ import { Keg } from './keg.model';
   template: `
   <div class="container">
     <div class="jumbotron">
-      <h1>Tap Room</h1>
+      <span>Tap Room</span>
     </div>
     <keg-list [childKegList]="masterKegList" (clickSender)="editKeg($event)"></keg-list>
     <hr>
@@ -20,9 +20,9 @@ import { Keg } from './keg.model';
 export class AppComponent {
   selectedKeg = null;
   masterKegList: Keg[] = [
-    new Keg('Bayerische Staatsbrauerei Weihenstephan', 'Weihenstephaner Pilsner', '5.1%', '5', 2),
-    new Keg('New Belgium', 'Voodoo Ranger', '7%', '6', 5),
-    new Keg('Deschutes Brewery', 'Obsidian Stout', '6.4%', '5', 7)
+    new Keg('Bayerische Staatsbrauerei Weihenstephan', 'Weihenstephaner Pilsner', 5.1, '5', 2),
+    new Keg('New Belgium', 'Voodoo Ranger', 7, '6', 5),
+    new Keg('Deschutes Brewery', 'Obsidian Stout', 6.4, '5', 7)
   ];
   editKeg(clickedKeg) {
     this.selectedKeg = clickedKeg;

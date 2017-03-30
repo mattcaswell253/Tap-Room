@@ -33,6 +33,11 @@
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: inherit;
+  text-align: center;
+  text-shadow: 2px 2px 2px black;
+  color: white;
+  font-family: 'UnifrakturCook', cursive;
+  font-size: 150px;
 }
 body {
   background: url("../../resources/images/background3.jpg");
@@ -55,6 +60,13 @@ body {
   border-radius: 5px;
   margin-top: 10px;
 }
+#edit-keg-form {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
 
 .new-label {
   text-align: left;
@@ -70,6 +82,7 @@ body {
 
 button {
   color: black;
+  margin-top: 2px;
 }
 
 input {
@@ -93,4 +106,8 @@ input {
 #current-beers {
   margin: 5px;
   padding: 3px;
+}
+
+.high-ABV {
+  color: red;
 }

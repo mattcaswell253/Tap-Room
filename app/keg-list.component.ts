@@ -13,33 +13,37 @@ import { Keg } from './keg.model';
    </select>
    <div id="tap-board">
    <div class="row">
-     <div class="col-md-8">
+     <div class="col-md-5">
        <h3>Brand | Name</h3>
      </div>
      <div class="col-md-2">
        <h3>ABV:</h3>
      </div>
-     <div class="col-md-2">
+     <div class="col-md-1">
        <h3>Price:</h3>
+     </div>
+     <div class="col-md-2">
+       <h3>Pints left:</h3>
      </div>
    </div>
    <hr>
 
 <div class="row">
-  <div *ngFor="let currentKeg of childKegList | volume:filterByVolume">
-    <div class="col-md-7 ">
-      <span class="_{{currentKeg.style}}" id="current-beers">{{currentKeg.brand}} | {{currentKeg.name}}:</span>
+  <div *ngFor="let currentKeg of childKegList | volume:filterByVolume" class="row">
+    <div class="col-md-5" (click)="editButtonHasBeenClicked(currentKeg)">
+      <span class="_{{currentKeg.style}}" id="current-beers">{{currentKeg.brand}} | {{currentKeg.name}}</span>
     </div>
-    <div class="col-md-1">
-    </div>
-    <div class="col-md-2">
+    <div [class]="drunkness(currentKeg)" class="col-md-2">
       {{currentKeg.abv}}
     </div>
-    <div (click)="isEmpty(currentKeg)" class="col-md-1">
+    <div class="col-md-1">
       $ {{currentKeg.price}}
     </div>
     <div class="col-md-1">
-      <button (click)="editButtonHasBeenClicked(currentKeg)">Edit!</button>
+      {{currentKeg.volume}}
+    </div>
+    <div class="col-md-2">
+    <button (click)="isEmpty(currentKeg)" class="btn">Sell!</button>
     </div>
   </div>
 </div>
@@ -86,16 +90,20 @@ export class KegListComponent {
   filterByVolume: string = "emptyKegs";
 
   isEmpty(clickedKeg: Keg) {
-    if(clickedKeg.volume > 11) {
+    if(clickedKeg.volume >= 11) {
       clickedKeg.volume -= 1;
-      alert(clickedKeg.volume);
-    } else if (clickedKeg.volume > 0) {
+    } else if (clickedKeg.volume <= 10 && clickedKeg.volume >= 1) {
       clickedKeg.volume -= 1;
-      alert("This keg is almost empty!");
-      alert(clickedKeg.volume);
     } else {
-      clickedKeg.empty === true;
-      alert("This keg is empty!");
+      clickedKeg.empty = true;
+    }
+  }
+
+  drunkness(currentKeg){
+    if (currentKeg.priority === 7){
+      return "high-ABV";
+    } else  {
+      return "regular-ABV";
     }
   }
 
