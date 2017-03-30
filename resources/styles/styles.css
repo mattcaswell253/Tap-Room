@@ -41,3 +41,56 @@ body {
   background-position: center;
   background-attachment: inherit;
 }
+
+.add-new-keg {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+}
+#tap-board {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.new-label {
+  text-align: left;
+}
+.new-input {
+  text-align: left;
+  color: black;
+}
+
+.select-option {
+  color: black;
+}
+
+button {
+  color: black;
+}
+
+input {
+  width: 20vw;
+  margin: 2px;
+}
+
+#new-keg-title {
+  font-size: 24px;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.color-coding {
+  border: 1px solid black;
+  text-align: center;
+  margin: 7px;
+  border-radius: 10px;
+}
+
+#current-beers {
+  margin: 5px;
+  padding: 3px;
+}

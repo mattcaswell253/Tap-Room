@@ -11,7 +11,7 @@ import { Keg } from './keg.model';
      <option value="emptyKegs">Empty Kegs</option>
      <option value="tappedKegs" selected="selected">Tapped Kegs</option>
    </select>
- </div>
+   <div id="tap-board">
    <div class="row">
      <div class="col-md-8">
        <h3>Brand | Name</h3>
@@ -23,13 +23,14 @@ import { Keg } from './keg.model';
        <h3>Price:</h3>
      </div>
    </div>
+   <hr>
 
 <div class="row">
   <div *ngFor="let currentKeg of childKegList | volume:filterByVolume">
-    <div class="col-md-8 _{{currentKeg.style}}">
-      {{currentKeg.brand}} | {{currentKeg.name}}:
-      <input *ngIf="currentKeg.empty === true" type="checkbox" (click)="toggleEmpty(currentKeg, false)"/>
-      <input *ngIf="currentKeg.empty === false" type="checkbox" (click)="toggleEmpty(currentKeg, true)"/>
+    <div class="col-md-7 ">
+      <span class="_{{currentKeg.style}}" id="current-beers">{{currentKeg.brand}} | {{currentKeg.name}}:</span>
+    </div>
+    <div class="col-md-1">
     </div>
     <div class="col-md-2">
       {{currentKeg.abv}}
@@ -42,33 +43,35 @@ import { Keg } from './keg.model';
     </div>
   </div>
 </div>
+</div>
+
 <hr>
 <div class="row">
   <div class="col-md-4">
-  <div class="row _1">
+  <div class="row _1 color-coding">
   Blonde Ale
   </div>
-  <div class="row _2">
+  <div class="row _2 color-coding">
   Pilsner
   </div>
-  <div class="row _3">
+  <div class="row _3 color-coding">
   Lager
   </div>
 
   </div>
   <div class="col-md-4">
-  <div class="row _4">
+  <div class="row _4 color-coding">
   Hefeweizen
   </div>
-  <div class="row _5">
+  <div class="row _5 color-coding">
   IPA
   </div>
-  <div class="row _6">
+  <div class="row _6 color-coding">
   Amber
   </div>
   </div>
   <div class="col-md-4">
-    <div class="row _7">
+    <div class="row _7 color-coding">
       Stout
     </div>
   </div>
