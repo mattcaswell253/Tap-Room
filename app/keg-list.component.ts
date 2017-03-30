@@ -38,11 +38,11 @@ import { Keg } from './keg.model';
       {{currentKeg.abv}}%
       </span>
     </div>
-    <div class="col-md-1">
+    <div class="col-md-1" id="pint-price">
       $ {{currentKeg.price}}
     </div>
     <div class="col-md-1">
-      {{currentKeg.volume}}
+      <span [class]="lowKeg(currentKeg)">{{currentKeg.volume}}</span>
     </div>
     <div class="col-md-2">
     <button (click)="isEmpty(currentKeg)" class="btn">Sell!</button>
@@ -61,23 +61,26 @@ import { Keg } from './keg.model';
   Pilsner
   </div>
   <div class="row _3 color-coding">
-  Lager
+  Hefeweizen
   </div>
 
   </div>
   <div class="col-md-4">
-  <div class="row _4 color-coding">
-  Hefeweizen
-  </div>
-  <div class="row _5 color-coding">
-  IPA
-  </div>
-  <div class="row _6 color-coding">
-  Amber
-  </div>
+    <div class="row _4 color-coding">
+    Lager
+    </div>
+    <div class="row _5 color-coding">
+    IPA
+    </div>
+    <div class="row _6 color-coding">
+    Amber
+    </div>
   </div>
   <div class="col-md-4">
     <div class="row _7 color-coding">
+      Porter
+    </div>
+    <div class="row _8 color-coding">
       Stout
     </div>
   </div>
@@ -112,6 +115,14 @@ export class KegListComponent {
 
   editButtonHasBeenClicked(kegToEdit: Keg) {
     this.clickSender.emit(kegToEdit);
+  }
+  lowKeg(currentKeg) {
+    var kegVolume: number = parseInt(currentKeg.volume);
+    if (kegVolume <= 10){
+      return "low-keg";
+    } else  {
+      return "tapped-keg";
+    }
   }
 
   onChange(optionFromMenu) {

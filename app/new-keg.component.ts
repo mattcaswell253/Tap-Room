@@ -38,11 +38,12 @@ import { Keg } from './keg.model';
       <select #newStyle class="select-option">
       <option type="radio" [value]="1">Blonde </option><br>
       <option type="radio" [value]="2">Pilsner </option><br>
-      <option type="radio" [value]="3">Lager </option><br>
-      <option type="radio" [value]="4">Hefeweizen </option><br>
+      <option type="radio" [value]="3">Hefeweizen </option><br>
+      <option type="radio" [value]="4">Lager </option><br>
       <option type="radio" [value]="5">IPA </option><br>
       <option type="radio" [value]="6">Amber </option><br>
-      <option type="radio" [value]="7">Stout </option>
+      <option type="radio" [value]="7">Porter </option>
+      <option type="radio" [value]="8">Stout </option>
       </select>
       <button class="btn" (click)="submitForm(newBrand.value, newName.value, newABV.value, newPrice.value, newStyle.value); newBrand.value=''; newName.value=''; newABV.value=''; newPrice.value='';">Add</button>
 

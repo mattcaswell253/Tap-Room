@@ -4,8 +4,8 @@ import { Keg } from './keg.model';
 @Component({
   selector: 'edit-keg',
   template: `
-    <div id="edit-keg-form">
     <div *ngIf="childSelectedKeg">
+    <div id="edit-keg-form">
       <h3>{{childSelectedKeg.brand}} - {{childSelectedKeg.name}}</h3>
       <h3>Edit Keg</h3>
       <label>Edit Keg Information</label><br>
@@ -22,15 +22,16 @@ import { Keg } from './keg.model';
       <br>
       <input type="radio" [(ngModel)]="childSelectedKeg.style" [value]="1"> Blonde<br>
       <input type="radio" [(ngModel)]="childSelectedKeg.style" [value]="2"> Pilsner<br>
-      <input type="radio" [(ngModel)]="childSelectedKeg.style" [value]="3"> Lager<br>
-      <input type="radio" [(ngModel)]="childSelectedKeg.style" [value]="4"> Hefeweizen<br>
+      <input type="radio" [(ngModel)]="childSelectedKeg.style" [value]="3"> Hefeweizen<br>
+      <input type="radio" [(ngModel)]="childSelectedKeg.style" [value]="4"> Lager<br>
       <input type="radio" [(ngModel)]="childSelectedKeg.style" [value]="5"> IPA<br>
       <input type="radio" [(ngModel)]="childSelectedKeg.style" [value]="6"> Amber<br>
-      <input type="radio" [(ngModel)]="childSelectedKeg.style" [value]="7"> Stout
+      <input type="radio" [(ngModel)]="childSelectedKeg.style" [value]="7"> Porter
+      <input type="radio" [(ngModel)]="childSelectedKeg.style" [value]="8"> Stout
       <button (click)="doneButtonClicked()">Done</button>
+      </div>
     </div>
 
-      </div>
   `
 })
 

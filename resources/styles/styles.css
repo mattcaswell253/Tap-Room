@@ -1,29 +1,33 @@
 ._1 {
-  background-color: rgb(253, 219, 39);
+  background-color: rgb(255, 255, 69);
 }
 
 ._2 {
-  background-color: rgb(250, 201, 1);
+  background-color: rgb(255, 233, 62);
 }
 
 ._3 {
-  background-color: rgb(250, 206, 42);
+  background-color: rgb(254, 216, 73);
 }
 
 ._4 {
-  background-color: rgb(171, 91, 20);
+  background-color: rgb(255, 168, 70);
 }
 
 ._5 {
-  background-color: rgb(228, 96, 37);
+  background-color: rgb(215, 127, 89);
 }
 
 ._6 {
-  background-color: #741800;
+  background-color: rgb(148, 82, 58);
 }
 
 ._7 {
-  background-color: rgb(5, 3, 6);
+  background-color: rgb(76, 59, 43);
+  color: white;
+}
+._8 {
+  background-color: rgb(56, 48, 46);
   color: white;
 }
 
@@ -48,7 +52,7 @@ body {
 }
 
 .add-new-keg {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.6);
   color: white;
   padding: 15px;
   border-radius: 5px;
@@ -61,7 +65,7 @@ body {
   margin-top: 10px;
 }
 #edit-keg-form {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.6);
   color: white;
   padding: 15px;
   border-radius: 5px;
@@ -88,6 +92,7 @@ button {
 input {
   width: 20vw;
   margin: 2px;
+  color: black;
 }
 
 #new-keg-title {
@@ -109,14 +114,31 @@ input {
 }
 
 .high-ABV {
-  color: red;
+  color: #b34800;
   font-weight: bold;
   text-shadow: 2px 2px 2px black;
-  font-size: 16px;
+  font-size: 18px;
   font-family: "Montserrat";
 }
 
 .regular-ABV {
-  font-size: 16px;
+  font-size: 18px;
   font-family: "Montserrat";
+}
+
+#pint-price {
+  font-family: "Stardos Stencil";
+  font-size: 18px;
+}
+
+.low-keg {
+  color: red;
+  font-family: "Crimson Text";
+  text-shadow: 2px 2px 2px black;
+  font-size: 20px;
+}
+
+.tapped-keg {
+  font-family: "Crimson Text";
+  font-size: 18px;
 }
