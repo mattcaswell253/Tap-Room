@@ -33,8 +33,10 @@ import { Keg } from './keg.model';
     <div class="col-md-5" (click)="editButtonHasBeenClicked(currentKeg)">
       <span class="_{{currentKeg.style}}" id="current-beers">{{currentKeg.brand}} | {{currentKeg.name}}</span>
     </div>
-    <div [class]="drunkness(currentKeg)" class="col-md-2">
-      {{currentKeg.abv}}
+    <div class="col-md-2">
+    <span [class]="drunkness(currentKeg)">
+      {{currentKeg.abv}}%
+      </span>
     </div>
     <div class="col-md-1">
       $ {{currentKeg.price}}
@@ -100,7 +102,8 @@ export class KegListComponent {
   }
 
   drunkness(currentKeg){
-    if (currentKeg.priority === 7){
+    var beerABV: number = currentKeg.abv;
+    if (beerABV >= 7){
       return "high-ABV";
     } else  {
       return "regular-ABV";

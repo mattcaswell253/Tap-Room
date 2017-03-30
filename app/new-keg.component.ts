@@ -24,7 +24,7 @@ import { Keg } from './keg.model';
         <label>ABV:</label>
       </div>
       <div class="col-md-10 new-input">
-        <input #newABV><br>
+        <input type="number" #newABV><br>
       </div>
       <div class="col-md-2 new-label">
         <label>Price:</label>
@@ -44,7 +44,7 @@ import { Keg } from './keg.model';
       <option type="radio" [value]="6">Amber </option><br>
       <option type="radio" [value]="7">Stout </option>
       </select>
-      <button class="btn" (click)="submitForm(newBrand.value, newName.value, parseInt(newABV.value), newPrice.value, newStyle.value); newBrand.value=''; newName.value=''; newABV.value=''; newPrice.value='';">Add</button>
+      <button class="btn" (click)="submitForm(newBrand.value, newName.value, newABV.value, newPrice.value, newStyle.value); newBrand.value=''; newName.value=''; newABV.value=''; newPrice.value='';">Add</button>
 
     </div>
     </div>
@@ -56,7 +56,6 @@ export class NewKegComponent {
 
   submitForm(brand: string, name: string, abv: number, price: string, style: number) {
     var newKegToAdd: Keg = new Keg(brand, name, abv, price, style);
-    console.log(newKegToAdd);
     this.newKegSender.emit(newKegToAdd);
   }
 }

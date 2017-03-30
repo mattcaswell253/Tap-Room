@@ -19,7 +19,7 @@
 }
 
 ._6 {
-  background-color: rgb(179, 0, 19);
+  background-color: #741800;
 }
 
 ._7 {
@@ -48,7 +48,7 @@ body {
 }
 
 .add-new-keg {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.8);
   color: white;
   padding: 15px;
   border-radius: 5px;
@@ -61,7 +61,7 @@ body {
   margin-top: 10px;
 }
 #edit-keg-form {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.8);
   color: white;
   padding: 15px;
   border-radius: 5px;
@@ -110,4 +110,13 @@ input {
 
 .high-ABV {
   color: red;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px black;
+  font-size: 16px;
+  font-family: "Montserrat";
+}
+
+.regular-ABV {
+  font-size: 16px;
+  font-family: "Montserrat";
 }
